@@ -54,4 +54,12 @@
 #define TEGRA_HSP_SM_RX(x) (TEGRA_HSP_SM_FLAG_RX | ((x) & TEGRA_HSP_SM_MASK))
 #define TEGRA_HSP_SM_TX(x) (TEGRA_HSP_SM_FLAG_TX | ((x) & TEGRA_HSP_SM_MASK))
 
+/*
+ * Shared interrupt source, mapped with mailboxes
+ */
+#define TEGRA_HSP_SHARED_IRQ_MASK 0xffff0000
+#define TEGRA_HSP_SHARED_IRQ_OFFSET (16)
+
+#define TEGRA_HSP_SHARED_IRQ(x) (((x) << TEGRA_HSP_SHARED_IRQ_OFFSET) & TEGRA_HSP_SHARED_IRQ_MASK)
+
 #endif
