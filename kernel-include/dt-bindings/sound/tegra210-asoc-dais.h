@@ -55,6 +55,8 @@
 #define XBAR_I2S3			12
 #define XBAR_I2S4			13
 #define XBAR_I2S5			14
+
+#if LINUX_VERSION >= 510
 #define XBAR_DMIC1			15
 #define XBAR_DMIC2			16
 #define XBAR_DMIC3			17
@@ -145,6 +147,74 @@
 #define XBAR_IQC1_2			77
 #define XBAR_IQC2_1			78
 #define XBAR_IQC2_2			79
+
+#else
+#define XBAR_SFC1_RX			15
+#define XBAR_SFC2_RX			16
+#define XBAR_SFC3_RX			17
+#define XBAR_SFC4_RX			18
+#define XBAR_SFC1_TX			XBAR_SFC1_RX
+#define XBAR_SFC2_TX			XBAR_SFC2_RX
+#define XBAR_SFC3_TX			XBAR_SFC3_RX
+#define XBAR_SFC4_TX			XBAR_SFC4_RX
+#define XBAR_MIXER_IN1			19
+#define XBAR_MIXER_IN2			20
+#define XBAR_MIXER_IN3			21
+#define XBAR_MIXER_IN4			22
+#define XBAR_MIXER_IN5			23
+#define XBAR_MIXER_IN6			24
+#define XBAR_MIXER_IN7			25
+#define XBAR_MIXER_IN8			26
+#define XBAR_MIXER_IN9			27
+#define XBAR_MIXER_IN10			28
+#define XBAR_MIXER_OUT1			XBAR_MIXER_IN1
+#define XBAR_MIXER_OUT2			XBAR_MIXER_IN2
+#define XBAR_MIXER_OUT3			XBAR_MIXER_IN3
+#define XBAR_MIXER_OUT4			XBAR_MIXER_IN4
+#define XBAR_MIXER_OUT5			XBAR_MIXER_IN5
+#define XBAR_AFC1			29
+#define XBAR_AFC2			30
+#define XBAR_AFC3			31
+#define XBAR_AFC4			32
+#define XBAR_AFC5			33
+#define XBAR_AFC6			34
+#define XBAR_OPE1_RX			35
+#define XBAR_OPE1_TX			XBAR_OPE1_RX
+#define XBAR_SPKPROT			36
+#define XBAR_MVC1_RX			37
+#define XBAR_MVC2_RX			38
+#define XBAR_MVC1_TX			XBAR_MVC1_RX
+#define XBAR_MVC2_TX			XBAR_MVC2_RX
+#define XBAR_IQC1_1			39
+#define XBAR_IQC1_2			40
+#define XBAR_IQC2_1			41
+#define XBAR_IQC2_2			42
+#define XBAR_DMIC1			43
+#define XBAR_DMIC2			44
+#define XBAR_DMIC3			45
+#define XBAR_AMX1_OUT			46
+#define XBAR_AMX1_IN1			47
+#define XBAR_AMX1_IN2			48
+#define XBAR_AMX1_IN3			49
+#define XBAR_AMX1_IN4			50
+#define XBAR_AMX2_OUT			51
+#define XBAR_AMX2_IN1			52
+#define XBAR_AMX2_IN2			53
+#define XBAR_AMX2_IN3			54
+#define XBAR_AMX2_IN4			55
+#define XBAR_ADX1_OUT1			56
+#define XBAR_ADX1_OUT2			57
+#define XBAR_ADX1_OUT3			58
+#define XBAR_ADX1_OUT4			59
+#define XBAR_ADX1_IN			60
+#define XBAR_ADX2_OUT1			61
+#define XBAR_ADX2_OUT2			62
+#define XBAR_ADX2_OUT3			63
+#define XBAR_ADX2_OUT4			64
+#define XBAR_ADX2_IN			65
+#define XBAR_OPE2_RX			66
+#define XBAR_OPE2_TX			XBAR_OPE2_RX
+#endif /* LINUX_VERSION >= 510 */
 
 /* common ADMAIF DAIs */
 #define ADMAIF1				0
